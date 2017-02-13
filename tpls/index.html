@@ -1,0 +1,25 @@
+<div class="container">
+	<header class="header">
+		<a href="javascript:;"><i class="fa fa-bars"></i></a>
+		<p><span class="bg">热点</span><span>关注</span></p>
+		<a href="javascript:;"><i class="fa"></i></a>
+	</header>
+	<ul class="ul" id="tab-ul">
+		<li class="bg2">足球现场</li>
+		<li>足球生活</li>
+		<li>足球美女</li>
+	</ul>
+	<main class="main">
+		<section id="home">
+			<ui-view></ui-view>				
+		</section>
+	</main>
+	<footer class="footer">
+		<a ui-sref="index.home" class="bg1"><i class="fa fa-home"></i><small>首页</small></a>
+		<a ui-sref="index.find"><i class="fa fa-search"></i><small>发现</small></a>
+		<a ui-sref="index.photo"><i class="fa fa-camera"></i></a>
+		<a ui-sref="index.my"><i class="fa fa-user"></i><small>我的</small></a>
+		<a ui-sref="index.signOut"><i class="fa fa-share-square-o"></i><small>退出</small></a>
+		<div class="arc"></div>
+	</footer>
+</div>

@@ -1,0 +1,17 @@
+﻿<div class="warp swiper-container">
+	<div class="swiper-wrapper">
+		<div class="football-sence swiper-slide">
+		 	<li class="dl" ng-repeat="d in data" ui-sref="index.details({data:$index})">
+		 		<p><img src={{d.img}}></p>
+		 		<h3>{{d.name}}</h3>
+		 	</li>
+		</div>
+		<div class="swiper-slide life">
+			<h2>足球生活</h2>
+		</div>
+		<div class="swiper-slide beauty">
+			<h2>足球美女</h2>
+		</div>
+	</div>
+	
+</div>

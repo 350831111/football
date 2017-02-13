@@ -1,0 +1,50 @@
+function config($stateProvider,$urlRouterProvider,$ocLazyLoadProvider){
+	$urlRouterProvider.otherwise("/index/home");
+	$stateProvider
+		.state("index",{
+			url:"/index",
+			templateUrl:"tpls/index.html"
+		})
+		.state("index.home",{
+			url:"/home",
+			templateUrl:"tpls/home.html",
+			controller:"homeController",
+			resolve:{
+				loadPlugin:function($ocLazyLoad){
+					return $ocLazyLoad.load([
+						{
+							files:["css/style.css"]
+
+						},
+						{
+							files:["js/index.js"]
+						}
+					])
+				}
+			}
+		})
+		.state("index.find",{
+			url:"/find",
+			templateUrl:"tpls/find.html"
+		})
+		.state("index.photo",{
+			url:"/photo",
+			templateUrl:"tpls/photo.html"
+		})
+		.state("index.my",{
+			url:"/my",
+			templateUrl:"tpls/my.html"
+		})
+		.state("index.signOut",{
+			url:"/signOut",
+			templateUrl:"tpls/signOut.html"
+		})
+		.state("index.details",{
+			url:"/details/:data",
+			templateUrl:"tpls/details.html",
+			controller:"detailsController"
+		})
+}
+
+angular.module("myApp")
+		.config(config)
